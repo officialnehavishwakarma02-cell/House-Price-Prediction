@@ -97,4 +97,6 @@ The purpose of this experiment was to explore another prediction task using the 
 Deployment
 
 The machine learning model is deployed using Streamlit Community Cloud
-[Live Application(https://saleprice-prediction.streamlit.app)
+[Live Application(https://saleprice-prediction.streamlit.app) to predict the saleprice
+The trained Random Forest model has been deployed using Streamlit community cloud to predict overallqual
+[Live Application(https://overallqual.streamlit.app)
