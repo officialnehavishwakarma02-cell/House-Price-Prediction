@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import numpy as np
 model=pickle.load(open("model.pkl","rb"))
 st.title("salePrice Prediction")
 GarageType=st.selectbox('enter GarageType',
@@ -47,5 +48,6 @@ if st.button("predict_price"):
     "BsmtFullBath": BsmtFullBath
 }])
     prediction=model.predict(features)
-    st.success(f"predicted sale price:{prediction[0]}")
+    prediction=np.expm1(prediction)
+    st.success(f"predicted sale price:{prediction[0]:,.2f}")
                              
